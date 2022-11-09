@@ -78,8 +78,6 @@ const ServiceDetails = () => {
 
 
 
-
-
         useEffect(()=>{
         fetch(`http://localhost:5000/reviews/${_id}`)
         .then(res => res.json())
