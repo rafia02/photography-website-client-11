@@ -8,6 +8,11 @@ const Modal = () => {
             <Link to="/login" className='btn btn-secondary'>Login</Link>
             
         </div>
+
+
+
+
+
     );
 };
 
