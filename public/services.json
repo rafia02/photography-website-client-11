@@ -1,0 +1,38 @@
+[
+    {
+      "title": "Interior Photography",
+      "img": "https://www.masterclass.com/cdn-cgi/image/width=828,quality=75,format=webp/https://images.ctfassets.net/3s5io6mnxfqz/6rFyhwlbJj7lGlVGQCW1l9/bd54b3b622766ba27c8cc7576654fd05/AdobeStock_246026295.jpeg",
+      "body": "Photography of hotels, resorts, commercial and residential. Our clients include architecture firms, developers, interior design firms, marketing agencies, retails, apartment leasing and management offices, hospitals and interior decorators.Apart from offering the best photography service to our clients, we also have a flexible pricing system that will suit everyone.",
+      "price": "144"
+    },
+    {
+      "title": "Product Shots Photography ",
+      "img": "https://img.fixthephoto.com/blog/images/gallery/news_preview_mob_image__preview_569.jpg",
+      "body": "We specialize in product photography in Johor Bahru and Singapore. We have the best Johor photographers & videographers. We are excited to offer in-house product photography for clients with a product inventory. Having awesome images would increase conversion rate and help to boost your sales. We pride ourselves in the quality of our product and maintain all aspects of our image capture and post-production in-house.",
+      "price": "499"
+    },
+    {
+      "title": "Food & Beverage Photography",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREamnvUzR19rQW1fWHEh0uOCQ1CBBdQNkgsrIFjeu50-yKHJ5aJ4AVRbA0Sv8FIJ0Y-Yc&usqp=CAU",
+      "body": "Food & Beverage Photography is a very specific genre, as it demands a passion and a deep understanding of the products: let’s remember that ice cream melts, caramel sticks, and fresh herbs witheredf. We have worked with a wide range of different establishments who now have an unending confidence in our excellent service.",
+      "price": "139"
+    },
+    {
+      "title": "Event Photographey",
+      "img": "https://cc-prod.scene7.com/is/image/CCProdAuthor/event-photography_P3b_720x350?$pjpeg$&jpegSize=200&wid=720",
+      "body": "Our breadth and depth of experience as corporate, convention and event photographers has allowed us to provide custom solutions for Event Organisers, Event Planners, PR & Marketing Professionals. Whether for your annual conference, holiday party or a private event, our experienced team is ready!",
+      "price": "249"
+    },
+    {
+      "title": "Video Services",
+      "img": "https://cc-prod.scene7.com/is/image/CCProdAuthor/what-is-videography_P1_900x420?$pjpeg$&jpegSize=200&wid=900",
+      "body": "Video services include HD video recording and editing, green screen work, creating motion graphics, sharing or archiving content, storyboarding, outline development, and basic scripting. Common video productions include lecture/event recordings, tutorials, instructional/course content creation, and promotional videos.",
+      "price": "199"
+    },
+    {
+      "title": "Jewellery Photographey",
+      "img": "https://www.skuvantage.com.au/wp-content/uploads/2022/03/jewellery-photography11-e1648689860574.jpeg",
+      "body": "Our expert photographers have clocked up hundreds of shooting hours at our professional photography studio to bring the best out of jewellery with detailed perfection. Our jewellery photography team enhances your products’ qualities so that your customers can see the real colour of your gemstones. Add some more sparkle to your jewellery products and capture the attention of your potential customers by availing yourself of our services for Jewellery",
+      "price": "150"
+    }
+  ]
