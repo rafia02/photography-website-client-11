@@ -73,8 +73,6 @@ const ServiceDetails = () => {
 
 
 
- 
-
 
 
         useEffect(()=>{
