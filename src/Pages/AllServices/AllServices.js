@@ -10,8 +10,7 @@ const AllServices = () => {
     const [services, setServices] = useState([])
     const [loding, setLoding] = useState()
 
-    // const services = useLoaderData()
-    // setLoding(false)
+
     Usetitle("services")
 
 

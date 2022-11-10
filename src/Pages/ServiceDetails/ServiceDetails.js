@@ -87,7 +87,7 @@ const ServiceDetails = () => {
         .catch(e => console.error(e))
     }, [_id])
 
-   console.log(addreview)
+  
 
 
     return (

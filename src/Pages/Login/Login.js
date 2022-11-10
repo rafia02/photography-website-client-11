@@ -89,7 +89,7 @@ const Login = () => {
             }
            <div className="hero  pt-10 pb-20 ">
             
-            <div className="hero-content grid grid-cols-2 gap-6">
+            <div className="hero-content grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="text-center mr-5 lg:text-left">
                     <img className='w-3/4' src="https://img.freepik.com/free-vector/bank-login-concept-illustration_114360-7964.jpg?w=2000" alt="" />
                 </div>
