@@ -18,7 +18,7 @@ const AllServices = () => {
     
     useEffect(()=>{
         setLoding(true)
-        fetch('http://localhost:5000/services')
+        fetch('https://photography-ass-11-server.vercel.app/services')
         .then(res => res.json())
         .then(data => {
           console.log(data)

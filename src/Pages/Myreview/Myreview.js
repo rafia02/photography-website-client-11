@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import toast from 'react-hot-toast';
+import { toast } from 'react-hot-toast';
 import { AuthContex } from '../../Context/ContextProvider';
 import MyreviewRow from './MyreviewRow';
 
@@ -11,7 +11,7 @@ const Myreview = () => {
 
  
     useEffect(()=>{
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`,{
+        fetch(`https://photography-ass-11-server.vercel.app/reviews?email=${user?.email}`,{
             headers: {
                 authorization: `Bearer ${localStorage.getItem('token')}`
             }
@@ -31,7 +31,7 @@ const Myreview = () => {
 
     const handleDelete =(id)=>{
         console.log(id)
-        fetch(`http://localhost:5000/reviews/${id}`,{
+        fetch(`https://photography-ass-11-server.vercel.app/reviews/${id}`,{
             method: 'DELETE'
         })
         .then(res => res.json())
@@ -51,7 +51,7 @@ const Myreview = () => {
         const agree = window.prompt('Update your review')
         console.log(agree)
        
-            fetch(`http://localhost:5000/reviews/${id}`,{
+            fetch(`https://photography-ass-11-server.vercel.app/reviews/${id}`,{
                 method: 'PATCH',
                 headers: {
                     'Content-type': 'application/json'
@@ -61,6 +61,7 @@ const Myreview = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
+    
             })
             .catch(e => console.error(e))
         
@@ -88,7 +89,7 @@ console.log(reviews)
 
             <div>
                 {
-                    reviews.map(riv => <MyreviewRow
+                    reviews?.map(riv => <MyreviewRow
                     key={riv._id}
                     riv={riv}
                     handleDelete={handleDelete}

@@ -15,7 +15,7 @@ export const router = createBrowserRouter([
         {path: '/services',element: <AllServices></AllServices>},
         {path: '/login', element: <Login></Login>},
         {path: 'signup', element: <Signup></Signup>},
-        {path: 'services/:id', loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`), element: <ServiceDetails></ServiceDetails>},
+        {path: 'services/:id', loader:({params})=>fetch(`https://photography-ass-11-server.vercel.app/services/${params.id}`), element: <ServiceDetails></ServiceDetails>},
         {path: '/blog', element: <Blog></Blog>},
         {path: '/myreview',  element: <Myreview></Myreview>},
         {path: '/addservice', element: <AddService></AddService>}

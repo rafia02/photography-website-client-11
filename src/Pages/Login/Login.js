@@ -39,7 +39,7 @@ const Login = () => {
             console.log(currentUser)
 
 
-            fetch('http://localhost:5000/jwt',{
+            fetch('https://photography-ass-11-server.vercel.app/jwt',{
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'

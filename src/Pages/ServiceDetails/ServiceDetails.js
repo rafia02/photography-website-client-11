@@ -41,7 +41,7 @@ const ServiceDetails = () => {
 
 
                 if(user.email){
-                    fetch("http://localhost:5000/reviews",{
+                    fetch("https://photography-ass-11-server.vercel.app/reviews",{
                         method: 'POST',
                         headers: {
                             'Content-type' : 'application/json'
@@ -78,7 +78,7 @@ const ServiceDetails = () => {
 
         useEffect(()=>{
 
-        fetch(`http://localhost:5000/reviews/${_id}`)
+        fetch(`https://photography-ass-11-server.vercel.app/reviews/${_id}`)
         .then(res => res.json())
         .then(data =>{
             setAddreview(data)

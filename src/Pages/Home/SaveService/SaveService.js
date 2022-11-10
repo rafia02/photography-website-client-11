@@ -8,7 +8,7 @@ const SaveService = () => {
 
      
     useEffect(()=>{
-        fetch('http://localhost:5000/newservice')
+        fetch('https://photography-ass-11-server.vercel.app/newservice')
         .then(res => res.json())
         .then(data => {
           console.log(data)
