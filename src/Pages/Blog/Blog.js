@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Usetitle from '../../Hook/Usetitle';
 
 const Blog = () => {
     Usetitle("blog")
+
     return (
         <div className='md:w-1/2 lg:w-1/2 mx-auto my-20 p-8 drop-shadow-lg rounded-xl bg-fuchsia-50'>
             <div tabIndex={0} className="collapse mb-5 collapse-arrow border border-base-300 bg-base-100 rounded-box">

@@ -3,6 +3,7 @@ import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContex } from '../../Context/ContextProvider';
 import Usetitle from '../../Hook/Usetitle';
+import Spiner from '../Spiner/Spiner';
 
 const Login = () => {
 
@@ -12,9 +13,11 @@ const Login = () => {
     const location = useLocation()
     const from = location.state?.from?.pathname || "/"
     Usetitle("login")
+    const [loding, setLoding] = useState()
 
     
     const handleLogin = (e)=>{
+        setLoding(true)
         e.preventDefault()
         const form = e.target
         const name = form.name.value
@@ -51,8 +54,10 @@ const Login = () => {
             .catch(e => console.log(e))
 
 
-
+            
             toast.success('Successfully login') 
+            setLoding(false)
+
             navigate(from ,{replace: true})     
         })
         .catch(e =>{
@@ -64,10 +69,12 @@ const Login = () => {
 
 
     const handlegoogleSignin =()=>{
+        setLoding(true)
         googleSignin()
         .then(res => {
             const user = res.user
             toast.success('Successfully login')
+            setLoding(false)
             navigate(from ,{replace: true})
         })
         .catch(e=> {
@@ -76,7 +83,12 @@ const Login = () => {
     }
 
     return (
-        <div className="hero  pt-10 pb-20 ">
+     <div>
+        {
+                loding ? <Spiner></Spiner> : ''
+            }
+           <div className="hero  pt-10 pb-20 ">
+            
             <div className="hero-content grid grid-cols-2 gap-6">
                 <div className="text-center mr-5 lg:text-left">
                     <img className='w-3/4' src="https://img.freepik.com/free-vector/bank-login-concept-illustration_114360-7964.jpg?w=2000" alt="" />
@@ -114,6 +126,7 @@ const Login = () => {
                 </div>
             </div>
         </div>
+     </div>
     );
 };
 
