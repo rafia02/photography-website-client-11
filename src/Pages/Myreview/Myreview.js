@@ -1,19 +1,16 @@
 import React, { useContext, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContex } from '../../Context/ContextProvider';
-import Spiner from '../Spiner/Spiner';
 import MyreviewRow from './MyreviewRow';
 
 const Myreview = () => {
     const {user} = useContext(AuthContex)
     const [reviews, setReviews] = useState([])
-    const [loding, setLoding] = useState(true)
-
+  
 
 
  
     useEffect(()=>{
-     
         fetch(`http://localhost:5000/reviews?email=${user?.email}`,{
             headers: {
                 authorization: `Bearer ${localStorage.getItem('token')}`
@@ -23,7 +20,7 @@ const Myreview = () => {
         .then(data => {
           console.log(data)
           setReviews(data)
-          setLoding(false)
+      
         })
     }, [user?.email])
 
@@ -33,7 +30,6 @@ const Myreview = () => {
 
 
     const handleDelete =(id)=>{
-        setLoding(true)
         console.log(id)
         fetch(`http://localhost:5000/reviews/${id}`,{
             method: 'DELETE'
@@ -48,7 +44,6 @@ const Myreview = () => {
             console.log(data)})
         
     }
-
 
 
     
@@ -80,10 +75,6 @@ console.log(reviews)
     return (
         <div className=' my-20 '>
 
-
-            {
-                loding ? <Spiner></Spiner> : ''
-            }
 
             <div className='mb-10 text-3xl text-center font-bold'>
                 

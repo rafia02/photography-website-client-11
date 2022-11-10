@@ -43,7 +43,7 @@ const Footer = () => {
 
 
                 <div className="items-center grid-flow-col mt-4">
-                <p>Copyright © 2022 - All right reserved</p>
+                <p>Copyright © 2022 - SR Photography</p>
             </div> 
 
             </div>

@@ -56,9 +56,9 @@ const Header = () => {
                 </ul>
                 </div>
                 <Link to="/">
-                    <img className='md:h-20 h-10 w-12 md:w-20 rounded-full' src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/photography-logo%2C-camera-logo%2C-modern-camera-design-template-61a629a6b006a5d93947e93c81f16ce4.jpg?ts=1660982220" alt="" />
+                    <img className=' h-10 w-10 rounded-full' src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/photography-logo%2C-camera-logo%2C-modern-camera-design-template-61a629a6b006a5d93947e93c81f16ce4.jpg?ts=1660982220" alt="" />
                 </Link>
-                <h1 className="text-2xl font-bold ml-3">SR Photography</h1>
+                <h1 className="text-2xl font-bold ml-3">SRGRAPHY</h1>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">

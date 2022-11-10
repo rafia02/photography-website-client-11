@@ -1,25 +1,28 @@
 import React, { useContext, useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import {Link, useLoaderData} from 'react-router-dom'
 import { AuthContex } from '../../Context/ContextProvider';
 import Usetitle from '../../Hook/Usetitle';
 import Modal from '../Modal';
+import Spiner from '../Spiner/Spiner';
 import Review from './Review';
 
 const ServiceDetails = () => {
     Usetitle('service-details')
-    const {user, loading, setLoading} = useContext(AuthContex)
+    const {user } = useContext(AuthContex)
     const service = useLoaderData()
     const {_id, img, body, title} = service
     const [addreview, setAddreview] = useState([])
     const [revw, setRevw] = useState({})
+    const [loding, setLoding] = useState()
 
 
   
 
 
          const handleAddReview =(e)=>{
-            e.preventDefault()
-    
+            setLoding(true)
+            e.preventDefault()    
      
                 const message =  e.target.message.value 
                 const name = user?.displayName 
@@ -49,10 +52,12 @@ const ServiceDetails = () => {
                     .then(data =>{
                         if(data.acknowledged){
                             e.target.reset()
-                            setLoading(true)
+        
                             setRevw(data)
                             const newReview = [...addreview, revw]
                             setAddreview(newReview)
+                            setLoding(false)
+                            toast.success('successfully added review')
                         }
                     })
                     .catch(e => console.error(e))
@@ -60,13 +65,9 @@ const ServiceDetails = () => {
         
                 }
 
-
                 else{
                    return <Modal></Modal>
                 }
-        
-        
-                
     
          
         }
@@ -76,11 +77,12 @@ const ServiceDetails = () => {
 
 
         useEffect(()=>{
+
         fetch(`http://localhost:5000/reviews/${_id}`)
         .then(res => res.json())
         .then(data =>{
             setAddreview(data)
-            setLoading(false)
+  
         })
         .catch(e => console.error(e))
     }, [_id])
@@ -90,6 +92,9 @@ const ServiceDetails = () => {
 
     return (
         <div>
+            {
+                loding ? <Spiner></Spiner> : ''
+            }
             <div className='mt-10 mb-40'>
                 <h1 className='text-5xl font-bold text-center font-mono my-8'>{title}</h1>
                 <img className='h-96 w-full rounded mb-10 mx-auto' src={img} alt="" />
