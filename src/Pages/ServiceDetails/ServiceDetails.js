@@ -16,9 +16,8 @@ const ServiceDetails = () => {
     const [revw, setRevw] = useState({})
     const [loding, setLoding] = useState()
 
-
+    
   
-
 
          const handleAddReview =(e)=>{
             setLoding(true)
@@ -62,7 +61,6 @@ const ServiceDetails = () => {
                     })
                     .catch(e => console.error(e))
         
-        
                 }
 
                 else{
@@ -81,7 +79,9 @@ const ServiceDetails = () => {
         fetch(`https://photography-ass-11-server.vercel.app/reviews/${_id}`)
         .then(res => res.json())
         .then(data =>{
+          
             setAddreview(data)
+          
   
         })
         .catch(e => console.error(e))

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Review = ({review}) => {
-console.log(review)
+
     const {email, name, img, message} = review
     return (
         <div className='card shadow-md bg-pink-50 p-10'>
