@@ -13,8 +13,6 @@ const Footer = () => {
             <div>
                 <span className="footer-title">Services</span> 
                 <a className="link link-hover">Event Photographey</a> 
-                {/* <a className="link link-hover">Food & Beverage Photography</a> 
-                <a className="link link-hover">Product Shots Photography</a>  */}
                 <a className="link link-hover">Jewellery Photographey</a>
                 <a className="link link-hover">Interior Photography</a> 
                 <a className="link link-hover">Video Services</a>

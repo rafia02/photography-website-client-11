@@ -17,13 +17,7 @@ const SingleSvSvc = ({ser}) => {
 
             <div className="card-body">
                 <h2 className="card-title">{title}</h2>
-                {/* <p>{body}</p> */}
-                <>
-                {
-                    body.length >100? <p>{body.slice(0, 100)+"..."}</p>:{body}
-                }
-
-                </>
+                <p>{body}</p>
                 <p className='text-pink-600 font-bold text-lg'>Price: ${price}</p>
                 <div className="card-actions justify-end">
                   <Link to={`/services/${_id}`}>

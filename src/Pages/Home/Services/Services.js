@@ -2,17 +2,26 @@ import React, { useEffect, useState } from 'react';
 import SingleService from './SingleService';
 import {Link} from 'react-router-dom'
 import SaveService from '../SaveService/SaveService';
+import Spiner from '../../Spiner/Spiner';
 
 const Services = () => {
+    const [loading, setLoading] = useState()
     
     const [services, setServices] = useState([])
     useEffect(()=>{
+        setLoading(true)
         fetch('https://photography-ass-11-server.vercel.app/serviceslimit')
         .then(res =>res.json())
-        .then(data => setServices(data))
+        .then(data => {
+            setServices(data)
+            setLoading(false)
+        })
     },[])
     return (
         <div>
+            {
+                loading && <Spiner></Spiner>
+            }
             <div  className='grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7'>
             {
                 services.map(service => <SingleService

@@ -61,8 +61,8 @@ const Login = () => {
             navigate(from ,{replace: true})     
         })
         .catch(e =>{
-            console.error(e)
-            setErrormessage(e.message) 
+            console.error(e.code.split('auth/'))
+            setErrormessage(e.code.split('auth/')) 
         })
 
     }
